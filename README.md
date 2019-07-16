@@ -1,4 +1,4 @@
-# oop-login-register
+# OOP Login and Register
 Reusable OOP login and register.
 
 Create the Users table: <br>
