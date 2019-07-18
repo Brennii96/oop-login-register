@@ -1,4 +1,10 @@
 <?php
 require_once 'core/init.php';
 
-$users = DB::getInstance();
+$user = DB::getInstance()->get('user', array('username', '=', 'brendan'));
+
+if ($user->error()) {
+    echo 'No user';
+} else {
+    echo 'Ok';
+}
