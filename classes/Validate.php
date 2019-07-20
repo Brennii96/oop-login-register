@@ -6,11 +6,19 @@ class Validate
         $_errors = array(),
         $_db = null;
 
+    /**
+     * Validate constructor.
+     */
     public function __construct()
     {
         $this->_db = DB::getInstance();
     }
 
+    /**
+     * @param $source
+     * @param array $items
+     * @return $this
+     */
     public function check($source, $items = array())
     {
         foreach ($items as $item => $rules) {
@@ -54,16 +62,25 @@ class Validate
         return $this;
     }
 
+    /**
+     * @param $error
+     */
     private function addError($error)
     {
         $this->_errors[] = $error;
     }
 
+    /**
+     * @return array
+     */
     public function errors()
     {
         return $this->_errors;
     }
 
+    /**
+     * @return bool
+     */
     public function passed()
     {
         return $this->_passed;

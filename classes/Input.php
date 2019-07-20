@@ -2,7 +2,10 @@
 
 class Input
 {
-    // check if form has been submitted
+    /**
+     * @param string $type
+     * @return bool
+     */
     public static function exists($type = 'post')
     {
         switch ($type) {
@@ -18,6 +21,10 @@ class Input
         }
     }
 
+    /**
+     * @param $item
+     * @return string
+     */
     public static function get($item)
     {
         if (isset($_POST[$item])) {
