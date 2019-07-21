@@ -15,7 +15,7 @@ Create the Users table: <br>
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(20) NULL,
   `email` VARCHAR(45) NULL,
-  `password` VARCHAR(64) NULL,
+  `password` VARCHAR(128) NULL,
   `salt` VARCHAR(32) NULL,
   `name` VARCHAR(50) NULL,
   `group` INT NULL,
