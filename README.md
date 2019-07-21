@@ -1,6 +1,15 @@
 # OOP Login and Register
 Reusable OOP login and register.
 
+Use the following code to test if you have bcrypt enabled (alternatively check echo phpinfo): <br>
+`<?php
+if (defined("CRYPT_BLOWFISH") && CRYPT_BLOWFISH) {
+    echo "CRYPT_BLOWFISH is enabled!";
+}else {
+echo "CRYPT_BLOWFISH is not available";
+}`
+
+
 Create the Users table: <br>
 ``CREATE TABLE `oop_login_register`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
